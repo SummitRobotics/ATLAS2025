@@ -14,7 +14,7 @@ import frc.robot.subsystems.CommandSwerveDrivetrain;
 public class DriveForwardCommand extends Command {
     private final CommandSwerveDrivetrain swerve;
     private final double targetDistanceMeters;
-    private final double maxSpeedMetersPerSecond = 0.5;
+    private final double maxSpeedMetersPerSecond = 1;
     private final double tolerance = 0.02; // 2cm tolerance
     private final boolean useFieldCentric;
 
