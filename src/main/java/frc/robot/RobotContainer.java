@@ -16,6 +16,7 @@ import edu.wpi.first.wpilibj2.command.Commands;
 import edu.wpi.first.wpilibj2.command.SequentialCommandGroup;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.RobotModeTriggers;
+import edu.wpi.first.wpilibj2.command.button.Trigger;
 import edu.wpi.first.wpilibj2.command.sysid.SysIdRoutine.Direction;
 // Ensure this import is present
 import frc.robot.commands.DriveForwardCommand;
@@ -37,7 +38,7 @@ public class RobotContainer {
     private final Telemetry logger = new Telemetry(MaxSpeed);
 
     private final CommandXboxController joystick = new CommandXboxController(0);
-
+    // private final Trigger autoPlaceButton = driverController.y();
     public final CommandSwerveDrivetrain drivetrain = TunerConstants.createDrivetrain();
     private final AlgaeArm algaeArm = new AlgaeArm();
 
@@ -82,6 +83,10 @@ public class RobotContainer {
                     .withRotationalRate(-joystick.getRightX() * MaxAngularRate) // Drive counterclockwise with negative X (left)
             )
         );
+        
+        // autoPlaceButton.onTrue(
+        //     new AutoPlace(drivetrain, algaeArm, limelight)
+        // );
 
         // Idle while the robot is disabled. This ensures the configured
         // neutral mode is applied to the drive motors while disabled.

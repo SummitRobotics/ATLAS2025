@@ -16,7 +16,7 @@ public class AlgaeArm extends SubsystemBase {
     private static final int MOTOR_CAN_ID = 15;
     private static final double DEFAULT_INTAKE_SPEED = 0.30;
     private static final double DEFAULT_HOLD_SPEED = 0.000;
-    private static final double DEFAULT_SHOOT_SPEED = 0.40;
+    private static final double DEFAULT_SHOOT_SPEED = 0.20;
     private static final double DEFAULT_CURRENT_THRESHOLD = 7;
 
     // Tunable values via Shuffleboard
