@@ -123,7 +123,7 @@ public class RobotContainer {
             // Reset heading at start of autonomous
             Commands.runOnce(() -> drivetrain.seedFieldCentric()),
             // Drive foward 1 foot in robot-centric mode
-            new DriveForwardCommand(drivetrain, 1.0 * kFeetToMeters, false)
+            new DriveForwardCommand(drivetrain, -1.0 * kFeetToMeters, false)
         );
     }
 }
